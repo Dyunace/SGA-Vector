@@ -5,7 +5,6 @@ using namespace std;
 
 int main(void)
 {
-	/////
 	/*
 	char str1[2][5] = {
 		{'A', 'B','C','D','E'},
