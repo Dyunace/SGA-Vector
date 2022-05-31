@@ -1,9 +1,11 @@
+// Vector 0.2
 #include <iostream>
 
 using namespace std;
 
 int main(void)
 {
+	/////
 	/*
 	char str1[2][5] = {
 		{'A', 'B','C','D','E'},
