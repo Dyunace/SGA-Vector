@@ -25,7 +25,7 @@ int back();
 void Delete(const int& _where);
 
 // 숙제 : 특정 위치에 데이터를 삽입하는 함수 만들기
-void insert();
+void Insert(const int& _where, const int& _Value);
 
 int main(void)
 {
@@ -35,6 +35,8 @@ int main(void)
 	pop_back();
 
 	Delete(4);
+
+	Insert(4, 666);
 
 	// 출력
 	for (int i = 0; i < Size; ++i)
@@ -99,4 +101,13 @@ void Delete(const int& _where)
 	--Size;
 	for (int i = _where + (-1); i < Size; ++i)
 		Vector[i] = Vector[i + 1];
+}
+
+void Insert(const int& _where, const int& _Value)
+{
+	++Size;
+	for (int i = Size; i > _where + (-1); --i)
+		Vector[i] = Vector[i - 1];
+
+	Vector[_where + (-1)] = _Value;
 }
